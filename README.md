@@ -1,16 +1,17 @@
-# chpter node
+# chpter Node Js Sample Project
 <p align="center"><a href="https://www.npmjs.com/package/@kipling/chpter" target="_blank"><img src="https://raw.githubusercontent.com/kiplingkelvin/ChpterNodeJsSample/master/nodejs_npm.png" width="400" alt="chpter Node Js"></a></p>
 
 
 Seamlessly accept payments from anywhere in the world.
 
-## Install
+## Setting up sample project
 
 ```
-npm install @kipling/chpter
+git clone https://github.com/kiplingkelvin/ChpterNodeJsSample.git
 ```
+
 ## NOTE
-Add the following files to your .env (Ensure it is named as the examples bellow)
+Add the following files to your .env (Ensure it is named as the examples below)
 ```env
 CHPTER_CLIENT_DOMAIN=
 CHPTER_TOKEN=
@@ -19,84 +20,22 @@ eg.
 
 CHPTER_CLIENT_DOMAIN=chpter.co
 CHPTER_TOKEN=chpter_pk_2b4037c1c8
-
 ```
 
-## Usage
-## Payments
-### Mpesa Payment with STK Push 
-
-```js
-const chpter = require("@kipling/chpter");
-
-customer = {
-        "payment_method": "MPesa",
-        "full_name": "John Doe",
-        "location": "Nairobi",
-        "phone_number": "254706347307",
-        "email": "johndoe@mail.com"  };
-
-products = [{
-        "product_id": "08",
-        "product_name": "HoodEez",
-        "quantity": "1",
-        "unit_price": "1" }];
-
-amount = {
-        "delivery_fee": "0",
-        "discount_fee": "0",
-        "total" : "1",
-        "currency" : "kes"};
-
-callback_details = {
-        "transaction_reference":  "123456789123",
-        "callback_url":  "https://eoeqwmbxsqqxo59.m.pipedream.net" };
-
-var response = await chpter.mpesaPayment(customer,products,amount,callback_details);
+## Installing packages
 ```
-
-### Card Payment
-
-```js
-const chpter = require("@kipling/chpter");
-
-customer = {
-        "payment_method": "MPesa",
-        "full_name": "John Doe",
-        "location": "Nairobi",
-        "phone_number": "254706347307",
-        "email": "johndoe@mail.com"  };
-
-products = [{
-        "product_id": "08",
-        "product_name": "HoodEez",
-        "quantity": "1",
-        "unit_price": "1" }];
-
-amount = {
-        "card_number": "4242424242424242",
-        "expiry_month": "08",
-        "expiry_year": "2030",
-        "cvc": "123"};
-
-card_details = {
-        "delivery_fee": "0",
-        "discount_fee": "0",
-        "total" : "1",
-        "currency" : "kes"};
-
-callback_details = {
-        "transaction_reference":  "123456789123",
-        "callback_url":  "https://eoeqwmbxsqqxo59.m.pipedream.net" };
-
-var response = await chpter.cardPayment(customer,products,amount, card_details, callback_details);
+npm install
 ```
-
+If you are running this in your localhost, don't forget to use [ngrok](https://ngrok.com/) to expose port 3030. This will allow you to receive callback payloads responses.
+## Starting the server
+```
+npm start
+```
 
 
 ## Resources
 
-- [Node Js Chpter Implementation Sample Project](https://github.com/kiplingkelvin/ChpterNodeJsSample)
+- [chpter node js package](https://www.npmjs.com/package/@kipling/chpter)
 
 ## Author
 
