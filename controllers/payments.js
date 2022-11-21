@@ -8,10 +8,10 @@ router.get("/mpesa",  async function(req, res){
 
     customer = {
         "payment_method": "MPesa",
-        "full_name": "John Doe",
+        "full_name": "Albert Chela",
         "location": "Nairobi",
-        "phone_number": "254706347307",
-        "email": "johndoe@mail.com"  };
+        "phone_number": "254700000000",
+        "email": "albertchela@mail.com"   };
 
     products = [{
             "product_id": "08",
@@ -45,10 +45,10 @@ router.get("/card", async function(req, res){
     
         customer = {
             "payment_method": "MPesa",
-            "full_name": "John Doe",
+            "full_name": "Albert Chela",
             "location": "Nairobi",
-            "phone_number": "254706347307",
-            "email": "johndoe@mail.com"  };
+            "phone_number": "254700000000",
+            "email": "albertchela@mail.com" };
     
         products = [{
                 "product_id": "08",
